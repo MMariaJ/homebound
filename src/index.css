@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8FAFC;
+    color: #1E293B;
+  }
+}
+
+@layer components {
+  .app-shell {
+    @apply min-h-screen max-w-app mx-auto flex flex-col bg-bg-light;
+  }
+}
