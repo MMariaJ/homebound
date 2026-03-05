@@ -35,7 +35,6 @@ export default function TaskCard({ task, isLocked }: Props) {
   const {
     completed,
     expandedTask,
-    role,
     toggleTask,
     setExpandedTask,
     markVaultUploaded,
@@ -46,8 +45,6 @@ export default function TaskCard({ task, isLocked }: Props) {
   const isDone = !!completed[task.id]
   const isExpanded = expandedTask === task.id
   const cfg = TYPE_CONFIG[task.type]
-  const accent = role === 'landlord' ? '#E67E22' : '#2980B9'
-
   const handleCardClick = () => {
     if (isLocked) return
     setExpandedTask(isExpanded ? null : task.id)

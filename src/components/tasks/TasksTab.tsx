@@ -1,4 +1,4 @@
-import { FileText, Upload } from 'lucide-react'
+import { FileText } from 'lucide-react'
 import { useAppStore } from '../../store/useAppStore'
 import { PHASES, TASK_DATA } from '../../data/tasks'
 import PhaseNav from './PhaseNav'
@@ -6,7 +6,7 @@ import TaskCard from './TaskCard'
 import { TYPE_CONFIG } from './TaskCard'
 
 export default function TasksTab() {
-  const { role, phaseIndex, completed, contractUploaded, uploadContract, setScreen } =
+  const { role, phaseIndex, completed, contractUploaded, uploadContract } =
     useAppStore()
 
   if (!role) return null
